@@ -1,0 +1,42 @@
+version: '3'
+services:
+  golf-nginx:
+    container_name: "golf-nginx"
+    build:
+      context: ./docker/nginx
+    depends_on:
+      - golf-app
+    ports:
+      - 8001:80
+    volumes:
+      - ./:/src
+
+  golf-app:
+    container_name: "golf-app"
+    build:
+      context: ./docker/php
+    depends_on:
+      - golf-mysql
+    volumes:
+      - ./:/src
+      - /src/node_modules
+      - /src/vendor
+      - ./docker/php/php.ini:/usr/local/etc/php/php.ini
+
+  golf-mysql:
+    image: mysql:8.0.37
+    command: --max_allowed_packet=32505856
+    container_name: "golf-mysql"
+    volumes:
+      - ./docker/mysql:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=golf
+    ports:
+      - 3400:3306
+
+  golf-redis:
+    image: redis:alpine
+    container_name: "golf-redis"
+    ports:
+      - 16379:6379
