@@ -1,0 +1,78 @@
+body {
+    max-width: 1200px; /* 最大幅を設定 */
+    margin: 0 auto;    /* 中央寄せ */
+    width: 100%;       /* 小さい画面でもレイアウトが崩れないようにする */
+}
+
+.noto-serif-jp {
+    font-family: "Noto Serif JP", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 200;
+}
+
+footer {
+    background-color: #1d5715;
+    height: 160px;
+}
+
+li {
+    list-style: none;
+}
+
+.footer {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.footerLogo {
+    color: #ffffff;
+    width: 20%;
+    text-align: left;
+    font-size: 18px;
+    padding-top: 5px;
+    height: 30px;
+}
+
+.footerInfo {
+    display: flex;
+    padding: 0;
+}
+
+.footerTimeList {
+    display: flex;
+    color: #ffffff;
+    font-size: 15px;
+    padding-left: 20px;
+}
+
+.footerList {
+    width: 60%;
+    padding-top: 30px;
+}
+
+.footerList ul{
+    display: flex;
+    font-size: 14px;
+    padding-left: 0;
+}
+
+.footerListUp li {
+    width: 20%;
+}
+
+.footerListUp {
+    border-bottom: 1px solid #ffffff;
+}
+
+.footerListDown {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.footerListDown li {
+    color: #ffffff;
+    font-size: 8px;
+    width: 25%;
+    text-align: center;
+}

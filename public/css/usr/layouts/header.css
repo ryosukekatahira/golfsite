@@ -9,10 +9,10 @@ body {
     font-optical-sizing: auto;
     font-style: normal;
     font-weight: 200;
-  }
+}
 
 header {
-    background-color: #006600;
+    background-color: #1d5715;
     height: 120px;
 }
 
@@ -38,7 +38,7 @@ header {
 }
 
 .btn-primary {
-    background-color: #006600;
+    background-color: #1d5715;
     border: 1px solid #ffffff;
     border-radius: 8px;
 }
